@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FruitJuiceTycoon">
+    <title>FruitJuiceTycoon</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(247, 164, 48);
+    }
+    #border{
+        background-color: greenyellow;
+        padding: 2% 5% 2% 5%;
+        border-radius: 5%;
+        box-shadow: 0 0 20px yellow;
+    }
+    p{
+        font-size: 150%;
+    }
+    #border2{
+        border: solid 2px antiquewhite;
+        padding: 0 14% 0 14%;
+        margin-top: 1%;
+        border-radius: 5%;
+        background-color: antiquewhite;
+        box-shadow: 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184);
+    }
+    #border3{
+        border: solid 2px antiquewhite;
+        padding: 1% 8% 1% 8%;
+        margin-top: 1%;
+        background-color: antiquewhite;
+        border-radius: 10%;
+        box-shadow: 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184);
+    }
+    input{
+        border-color: antiquewhite;
+        box-shadow: 0 0 5px antiquewhite;
+        background-color: antiquewhite;
+        width: 100%;
+    }
+    #border4{
+        background-color: antiquewhite;
+        margin-top: 1%;
+        padding: 3% 10% 3% 10%;
+        border-radius: 3%;
+        box-shadow: 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184), 0 0 10px rgb(252, 222, 184);
+    }
+    button{
+        font-size: 150%;
+    }
+    #serving{
+        border-radius: 7%;
+        margin-top: 3%;
+        padding: 1% 3% 1% 3%;
+        box-shadow: 0 0 20px antiquewhite;
+    }
+</style>
+<body>
+    <div id="border">
+        <h1>Fruit Juice Tycoon</h1>
+    </div>
+    <div id="border2">
+        <p id="emoji">😀</p>
+        <p id="display"></p>
+        <p id="display2"></p>
+    </div>
+    <div id="border3">
+        <input type="text" id="output" placeholder="Add ingredients to make juice" disabled>
+    </div>
+    <div id="border4">
+        <button onclick="append('🍓')">🍓</button>
+        <button onclick="append('🥝')">🥝</button>
+        <button onclick="append('🥥')">🥥</button>
+        <button onclick="append('🍈')">🍈</button>
+        <br>
+        <button onclick="append('🍌')">🍌</button>
+        <button onclick="append('🍍')">🍍</button>
+        <button onclick="append('🍉')">🍉</button>
+        <button onclick="append('🍊')">🍊</button>
+        <br>
+        <button onclick="append('🥭')">🥭</button>
+        <button onclick="append('🍏')">🍏</button>
+        <button onclick="append('🍐')">🍐</button>
+        <button onclick="append('🍑')">🍑</button> 
+    </div>
+    <button id="serving" onclick="servejuice()">serve</button>
+    <script>
+        let choice = ['🍓','🍑','🥝','🥥','🍈','🍌','🍉','🍊','🍍','🥭','🍏','🍐'];
+        let choose = Math.floor(Math.random() * choice.length);
+        let answ = document.getElementById("display").textContent = choice[choose];
+        function append(value){
+            document.getElementById("output").value = value;
+        }
+        function servejuice(){
+            if(answ === document.getElementById("output").value){
+            document.getElementById("display2").textContent = "So Delicious";
+            document.getElementById("emoji").textContent = "😊";
+            setInterval(()=>{
+                document.getElementById("serving").value = window.location.reload();
+            }, 2000)
+        }
+        else{
+            document.getElementById("emoji").textContent = "😡"
+            document.getElementById("display2").textContent = "I dont want this";
+        }
+    }
+    </script>
+</body>
+</html>

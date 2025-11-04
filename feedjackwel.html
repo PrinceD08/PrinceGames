@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="doctorgame">
+        <title>
+            Doctor game
+        </title>
+    </head>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 150%;
+            background-color: rgb(252, 127, 148);
+        }
+        #realborder{
+            background-color: rgb(236, 191, 191);
+            padding: 1% 7% 8% 7%;
+            border-radius: 7%;
+            box-shadow: 0 0 20px purple;
+        }
+        button{
+            font-size: 100%;
+        }
+        #serve{
+            box-shadow: 0 0 10px purple;
+            margin-top: 2%;
+            position: absolute;
+            animation: move 1s ease-in-out infinite alternate;
+        }
+        @keyframes move{
+            0%{transform: translateX(0);}
+            100%{transform: translateX(20px);}
+        }
+    </style>
+    <body>
+        <div>
+            <h1>
+                Feed Jack
+            </h1>
+            <p>A simple game to to test a childs mind</p>
+        </div>
+        <div id="realborder">
+            <h1>Feed Jack</h1>
+        <div id="border">
+        <p id="emoji">😎</p>
+        <p id="majortext">"I'm so hungry. Feed me"</p>
+        <p id="recipe"></p>
+        </div>
+        <div id="border2">
+            <input id="output" type="text" disabled>
+        </div>
+        <div id="border3">
+            <button onclick="append('🍕')">🍕</button>
+            <button onclick="append('🍔')">🍔</button>
+            <button onclick="append('🌭')">🌭</button>
+            <button onclick="append('🥗')">🥗</button>
+            <button onclick="append('🧇')">🧇</button>
+            <br>
+            <button onclick="append('🥨')">🥨</button>
+            <button onclick="append('🌮')">🌮</button>
+            <button onclick="append('🍤')">🍤</button>
+            <button onclick="append('🥥')">🥥</button>
+            <button onclick="append('🍖')">🍖</button>
+            <br>
+            <button onclick="append('🍗')">🍗</button>
+            <button onclick="append('🥩')">🥩</button>
+            <button onclick="append('🥚')">🥚</button>
+            <button onclick="append('🥞')">🥞</button>
+            <button onclick="append('🥓')">🥓</button>
+            <br>
+            <button onclick="append('🍞')">🍞</button>
+            <button onclick="append('🥡')">🥡</button>
+            <button onclick="append('🍩')">🍩</button>
+            <button onclick="append('🥪')">🥪</button>
+            <button onclick="append('🍿')">🍿</button>
+            <br>
+            <button id="serve" onclick="feed()"><a href="feedjack.html">Tap to Play</a></button>
+        </div>
+        </div>
+    </body>
