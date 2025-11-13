@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="gamehomepage">
+    <title>GamesHomepage</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to right, dodgerblue, purple);
+        background-size: 200%;
+        animation: move 3s ease-in-out infinite alternate;
+    }
+    @keyframes move{
+        0%{background-position: 0 0;}
+        100%{background-position: 100% 0;}
+    }
+    #mainborder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1{
+        font-size: 300%;
+    }
+    section{
+        box-shadow: 0 0 20px white;
+        padding: 4%;
+        margin-top: 5%;
+        border-radius: 1em;
+    }
+    section:hover{
+        font-size: 120%;
+        box-shadow: 0 0 20px blue;
+    }
+</style>
+<body>
+    <div id="mainborder">
+        <h1>Prince Games </h1>
+        <section>
+            Feed-jack <br>
+            <a href="feedjackwel.html">Click here to play</a>
+        </section>
+        <section>
+            Fruit-juicetycoon <br>
+            <a href="FruitJuiceTycoon.html">Fruit-juicetycoon </a>
+        </section>
+    </div>
+</body>
+</html>
